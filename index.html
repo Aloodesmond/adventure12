@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Ventures</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Updated style for the bottom-right image */
+      .bottom-right-image {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 150px; /* Increased size */
+        height: auto;
+        z-index: 100;
+        transition: transform 0.3s ease; /* Smooth hover effect */
+      }
+
+      .bottom-right-image:hover {
+        transform: scale(1.1); /* Slight enlargement on hover */
+      }
+
+      /* Container to position the image relative to */
+      .image-container {
+        position: relative;
+        min-height: 100vh; /* Ensure container takes at least full viewport height */
+      }
+    </style>
+  </head>
+  <body id="home">
+    <header class="header">
+      <div class="logo">Safari<span>Ventures</span></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="the-jumbo.html">The Jumbo</a>
+        <a href="big-cats.html">Big Cats</a>
+        <a href="primates.html">Primates</a>
+        <a href="references.html">References</a>
+      </nav>
+      <img
+        src="./images/navimage.jpg"
+        alt="Safari Icon"
+        class="tree-icon"
+        style="background-color: white; border: none; box-shadow: none"
+      />
+    </header>
+
+    <div class="image-container">
+      <div class="home-container">
+        <div class="home-text">
+          <h1>LET'S GO ON SAFARI</h1>
+          <p>
+            We'll plan your tickets & stay. Then create, snap and store your
+            wild memories!
+          </p>
+          <a href="#" class="btn">LET'S GO</a>
+        </div>
+        <div class="home-images">
+          <div class="left-images">
+            <div class="home-image">
+              <img src="./images/safari_tree.jpg" alt="Safari Tree" />
+            </div>
+            <div class="home-image">
+              <img src="./images/zebra.jpg" alt="zebra" />
+            </div>
+          </div>
+          <div class="right-image">
+            <div class="home-image">
+              <img src="./images/lion.jpg" alt="Lion" height="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom right image - now inside the container so it scrolls with content -->
+      <img
+        src="./images/image1.png"
+        alt="Mathematics symbol"
+        class="bottom-right-image"
+      />
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Ensure home link is active on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        // Remove active class from all nav links
+        document.querySelectorAll(".nav a").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        // Add active class to home link
+        document
+          .querySelector('.nav a[href="index.html"]')
+          .classList.add("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>References | Safari Ventures</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .reference-image {
+        flex: 1;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 400px;
+      }
+
+      .reference-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .reference-container {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: calc(100vh - 100px);
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 768px) {
+        .reference-container {
+          flex-direction: column;
+          padding: 1rem;
+        }
+        .reference-image {
+          max-height: 300px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body id="references">
+    <header class="header">
+      <div class="logo">Safari<span>Ventures</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="the-jumbo.html">The Jumbo</a>
+        <a href="big-cats.html">Big Cats</a>
+        <a href="primates.html">Primates</a>
+        <a href="references.html" class="active">References</a>
+      </nav>
+      <img src="./images/navimage.jpg" alt="Safari Icon" class="tree-icon" />
+    </header>
+
+    <div class="reference-container">
+      <div class="reference-text">
+        <h1>REFERENCES PAGE</h1>
+        <p>
+          This website was created by Akha445. I used images from
+          <a href="https://unsplash.com">https://unsplash.com</a> via its Figma
+          plugin
+        </p>
+        <a href="index.html" class="btn">BACK HOME</a>
+      </div>
+      <div class="reference-image">
+        <img src="./images/creator.jpg" alt="Creator Photo" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
